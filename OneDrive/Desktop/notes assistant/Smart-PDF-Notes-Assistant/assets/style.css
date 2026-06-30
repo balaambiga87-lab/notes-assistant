@@ -1,0 +1,79 @@
+/* Custom styling for Smart PDF Notes Assistant */
+
+/* Restored default clean app layout */
+.stApp {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Card container design */
+.custom-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 1.5rem;
+}
+
+/* Header typography */
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #475569;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* SPECIFIC TARGET: ONLY AI Assistant Answer Text in Rich Deep Blue (#1e3a8a) */
+[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarAssistant"]) p,
+[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarAssistant"]) span,
+[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarAssistant"]) li,
+[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarAssistant"]) strong,
+[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarAssistant"]) div,
+[data-testid="stChatMessage"]:has([aria-label="assistant"]) p,
+[data-testid="stChatMessage"]:has([aria-label="assistant"]) span,
+[data-testid="stChatMessage"]:has([aria-label="assistant"]) li {
+    color: #1e3a8a !important;
+    font-weight: 500;
+}
+
+/* Fallback target for assistant chat bubbles */
+.ai-answer-box, 
+.ai-answer-box p, 
+.ai-answer-box span, 
+.ai-answer-box li, 
+.ai-answer-box strong {
+    color: #1e3a8a !important;
+    font-weight: 500;
+}
+
+/* Source badge tags */
+.source-tag {
+    display: inline-block;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #bfdbfe;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer styling */
+.footer-text {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.875rem;
+    padding: 2rem 0 1rem 0;
+}
